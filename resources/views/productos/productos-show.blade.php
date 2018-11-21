@@ -102,7 +102,7 @@
     @endphp
     <div class="row">
       @foreach($categories as $category)      
-        <div class="col-lg-4 col-xs-12"">
+        <div class="col-lg-4 col-xs-12">
           <!-- small box -->
           <div class="small-box bg-{{ $color[$i++] }}">
             <div class="inner">
