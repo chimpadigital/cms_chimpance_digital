@@ -41,7 +41,7 @@ class NewsController extends Controller
     	$image = $request->file('slide');
     	
         Novelty::create([
-    		'url_image'=>$image->store('news','public'),
+    		'url_image'=>$image->store('news','dropbox'),
     	]);
 
         if (Novelty::count() >= 6) 
@@ -61,7 +61,7 @@ class NewsController extends Controller
 
         $img = Novelty::where('id',$imgId)->first(); 
 
-        Storage::disk('public')->delete($img->url_image);
+        Storage::disk('dropbox')->delete($img->url_image);
 
         Novelty::where('id',$imgId)->delete();
 
