@@ -64,7 +64,7 @@
 
 
           @forelse($productsAll as $product)
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{ $product->categories->name }} destroy-{{ $product->id }}">
+            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter {{ $product->categories->name }} destroy-{{ $product->id }}">
                 <img src="{{ Storage::disk('public')->url($product->url_image)  }}" class="img-responsive">
             </div>
           @empty
@@ -102,7 +102,7 @@
     @endphp
     <div class="row">
       @foreach($categories as $category)      
-        <div class="col-lg-4 col-xs-6">
+        <div class="col-lg-4 col-xs-12"">
           <!-- small box -->
           <div class="small-box bg-{{ $color[$i++] }}">
             <div class="inner">
@@ -138,45 +138,48 @@
   </div>
 
   <div class="box-body">
-    <table id="table-{{$category->name}}" class="grid table" title="Kurt Vonnegut novels">
+    <div class="table-responsive">
 
-      <thead>
-          <tr>
-            <th>No.</th>
-            <th>Archivo</th>
-            <th>Eliminar</th>
-          </tr>
-      </thead>
-      <tbody>
-        @php
-          $i=1;
-        @endphp
-        @forelse($productsAll as $product)
-        @if($product->categories->name == $category->name)
-          <tr class="table-values destroy-{{ $product->id }}">
-            <td class="index">{{$i++}}</td>
-            <td>
-             
-              <img style="max-width: 300px; max-height: 150px;" src="{{ Storage::disk('public')->url($product->url_image) }}" class="img-responsive img-show">
-                   
-            </td>
-            
-            <td class="product-id  hidden">{{$product->id}}</td>
-            
-            <td>
+      <table id="table-{{$category->name}}" class="grid table" title="Kurt Vonnegut novels">
+
+        <thead>
+            <tr>
+              <th>No.</th>
+              <th>Archivo</th>
+              <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+          @php
+            $i=1;
+          @endphp
+          @forelse($productsAll as $product)
+          @if($product->categories->name == $category->name)
+            <tr class="table-values destroy-{{ $product->id }}">
+              <td class="index">{{$i++}}</td>
+              <td>
+               
+                <img style="max-width: 300px; max-height: 150px;" src="{{ Storage::disk('public')->url($product->url_image) }}" class="img-responsive img-show">
+                     
+              </td>
               
-              <button class="btn btn-danger btn-destroy-{{$category->name}}" id="{{ $product->id }}"  ><i class="fa fa-trash"></i></button>
-  
-            </td>
-          </tr>
-          @endif
-        @empty
-          <p>
-          No hay productos por los momentos
-          </p>
-        @endforelse
-      </tbody>
-    </table>
+              <td class="product-id  hidden">{{$product->id}}</td>
+              
+              <td>
+                
+                <button class="btn btn-danger btn-destroy-{{$category->name}}" id="{{ $product->id }}"  ><i class="fa fa-trash"></i></button>
+    
+              </td>
+            </tr>
+            @endif
+          @empty
+            <p>
+            No hay productos por los momentos
+            </p>
+          @endforelse
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>

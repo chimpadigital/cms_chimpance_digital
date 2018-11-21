@@ -17,6 +17,16 @@
     margin-bottom: 30px;
 }
 
+.box-body { 
+border-top-left-radius: 0; 
+border-top-right-radius: 0; 
+border-bottom-right-radius: 3px; 
+border-bottom-left-radius: 3px; 
+padding: 10px; 
+width: 100%; 
+overflow-x: scroll; 
+} 
+
 
 </style>
 @endsection
@@ -35,59 +45,61 @@
 
   <div class="box-body">
 
-    <table id="sort" class="grid table" title="Kurt Vonnegut novels">
+    <div class="table-reponsive">
 
-      <thead>
-          <tr>
-            <th>No.</th>
-            <th>Archivo</th>
-            <th>Nombre</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
-          </tr>
-      </thead>
-      <tbody>
-        @php
-          $i=1;
-        @endphp
-        @forelse($catalogues as $catalogue)
-          <tr class="table-values">
-            <td class="index">{{$i++}}</td>
-            <td> 
-              <img style="max-width: 300px; max-height: 150px;" src="{{ Storage::disk('public')->url($catalogue->url_image) }}" class="img-responsive img-show">   
-            </td>
-            <td>{{$catalogue->name}}</td>
-            
-            <td class="img-id  hidden">{{$catalogue->id}}</td>
-            <td>
-              <form action="{{ route('catalogue-edit') }}" method="post">
+      <table id="sort" class="grid table" title="Kurt Vonnegut novels">
 
-                <input name="id" type="hidden" value="{{ $catalogue->id }}">
+        <thead>
+            <tr>
+              <th>No.</th>
+              <th>Archivo</th>
+              <th>Nombre</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+          @php
+            $i=1;
+          @endphp
+          @forelse($catalogues as $catalogue)
+            <tr class="table-values">
+              <td class="index">{{$i++}}</td>
+              <td> 
+                <img style="max-width: 300px; max-height: 150px;" src="{{ Storage::disk('public')->url($catalogue->url_image) }}" class="img-responsive img-show">   
+              </td>
+              <td>{{$catalogue->name}}</td>
+              
+              <td class="img-id  hidden">{{$catalogue->id}}</td>
+              <td>
+                <form action="{{ route('catalogue-edit') }}" method="post">
 
-                @csrf
-                      
-                <button class="btn btn-primary"><i class="fa fa-pencil"></i></button>
-              </form>
-            </td>
-            <td>
-              <form action="{{ route('catalogue-destroy') }}" method="post">
+                  <input name="id" type="hidden" value="{{ $catalogue->id }}">
 
-                <input name="id" type="hidden" value="{{ $catalogue->id }}">
+                  @csrf
+                        
+                  <button class="btn btn-primary"><i class="fa fa-pencil"></i></button>
+                </form>
+              </td>
+              <td>
+                <form action="{{ route('catalogue-destroy') }}" method="post">
 
-                @csrf
-                      
-                <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
-              </form>
-            </td>
-          </tr>
-        @empty
-          <p>
-          No hay Slides por los momentos
-          </p>
-        @endforelse
-      </tbody>
-    </table>
+                  <input name="id" type="hidden" value="{{ $catalogue->id }}">
 
+                  @csrf
+                        
+                  <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                </form>
+              </td>
+            </tr>
+          @empty
+            <p>
+            No hay Slides por los momentos
+            </p>
+          @endforelse
+        </tbody>
+      </table>
+    </div>
   </div>
 
 </div>

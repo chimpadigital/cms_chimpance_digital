@@ -34,7 +34,7 @@
   </div>
 
   <div class="box-body">
-
+  <div class="table-responsive">
     <table id="sort" class="grid table" title="Kurt Vonnegut novels">
 
       <thead>
@@ -94,6 +94,8 @@
         @endforelse
       </tbody>
     </table>
+
+    </div>
 
   </div>
 
