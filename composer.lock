@@ -4,62 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4e14d4179a25599485880a90ec62387",
+    "content-hash": "afa95c39bd8eb501f220c10c636964bd",
     "packages": [
-        {
-            "name": "benjamincrozat/laravel-dropbox-driver",
-            "version": "2.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/benjamincrozat/laravel-dropbox-driver.git",
-                "reference": "3e766f5b2fb87ea05ca8278b259ccf356bcf8d15"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/benjamincrozat/laravel-dropbox-driver/zipball/3e766f5b2fb87ea05ca8278b259ccf356bcf8d15",
-                "reference": "3e766f5b2fb87ea05ca8278b259ccf356bcf8d15",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1",
-                "spatie/flysystem-dropbox": "^1.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "3.*",
-                "phpunit/phpunit": "6.*|7.*"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "BC\\Laravel\\DropboxDriver\\ServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "BC\\Laravel\\DropboxDriver\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "WTFPL"
-            ],
-            "authors": [
-                {
-                    "name": "Benjamin Crozat",
-                    "email": "benjamin@croz.at"
-                }
-            ],
-            "description": "Dropbox driver for Laravel.",
-            "homepage": "https://github.com/benjamincrozat/laravel-dropbox-driver",
-            "keywords": [
-                "driver",
-                "dropbox",
-                "laravel"
-            ],
-            "time": "2018-09-05T10:14:22+00:00"
-        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
