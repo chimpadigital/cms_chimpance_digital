@@ -29,9 +29,15 @@
 	
 		<i class="fa fa-upload"></i>
 
-	  	<h3 class="box-title">Subir Imagen</h3>
+	  <h3 class="box-title">Subir Slide</h3>
 
 	</div>
+
+  <!-- ************************ MODAL VIDEO ************************ -->
+
+  @include('modals.add-video-modal')
+
+  <!-- ************************ MODAL VIDEO ************************ -->
 
 	<!-- /.box-header -->
 
@@ -57,7 +63,7 @@
 Dropzone.options.myAwesomeDropzone = {
  
   paramName: "slide", // The name that will be used to transfer the file
-  maxFilesize: 6, // MB
+  maxFilesize: 12, // MB
   addRemoveLinks:true,
   maxFiles: {{ $count }},
   acceptedFiles:"image/*,video/mp4,,video/webm",

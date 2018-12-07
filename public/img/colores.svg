@@ -1,0 +1,50 @@
+<svg id="colores" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 704.778 17.52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dce749;
+      }
+
+      .cls-2 {
+        fill: #e45a29;
+      }
+
+      .cls-3 {
+        fill: #d32f2e;
+      }
+
+      .cls-4 {
+        fill: #deb24e;
+      }
+
+      .cls-5 {
+        fill: #39b259;
+      }
+
+      .cls-6 {
+        fill: #2ea8d6;
+      }
+
+      .cls-7 {
+        fill: #7b70b0;
+      }
+
+      .cls-8 {
+        fill: #0878b5;
+      }
+
+      .cls-9 {
+        fill: #2a3385;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_411" data-name="Rectangle 411" class="cls-1" width="79.028" height="17.52" transform="translate(0)"/>
+  <rect id="Rectangle_412" data-name="Rectangle 412" class="cls-2" width="79.028" height="17.52" transform="translate(79.028)"/>
+  <rect id="Rectangle_413" data-name="Rectangle 413" class="cls-3" width="79.028" height="17.52" transform="translate(158.057)"/>
+  <rect id="Rectangle_414" data-name="Rectangle 414" class="cls-4" width="79.028" height="17.52" transform="translate(237.085)"/>
+  <rect id="Rectangle_415" data-name="Rectangle 415" class="cls-5" width="79.028" height="17.52" transform="translate(316.114)"/>
+  <rect id="Rectangle_416" data-name="Rectangle 416" class="cls-6" width="79.028" height="17.52" transform="translate(395.142)"/>
+  <rect id="Rectangle_417" data-name="Rectangle 417" class="cls-7" width="79.028" height="17.52" transform="translate(474.17)"/>
+  <rect id="Rectangle_418" data-name="Rectangle 418" class="cls-8" width="79.028" height="17.52" transform="translate(553.199)"/>
+  <rect id="Rectangle_419" data-name="Rectangle 419" class="cls-9" width="79.028" height="17.52" transform="translate(625.749)"/>
+</svg>

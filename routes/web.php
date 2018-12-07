@@ -11,11 +11,21 @@
 |
 */
 
-Route::middleware(['auth'])->group(function () {
+Route::get('/','IndexController@index')->name('index');
 
-Route::get('/', function () {
-    return redirect()->route('news-show');
-});
+Route::get('/catalogos','IndexController@catalogue')->name('catalogo');
+
+Route::get('/extranet',function(){
+	return view('extranet');
+})->name('extranet');
+
+Route::get('/contacto',function(){
+	return view('contacto');
+})->name('contacto');
+
+Route::post('/contacto','IndexController@contact');
+
+Route::middleware(['auth'])->group(function () {
 
 //Novedades
 
