@@ -55,7 +55,7 @@ class IndexController extends Controller
 
         //dd($contact);
 
-        Notification::route('mail', 'sprados@chimpancedigital.com.ar')
+        Notification::route('mail', 'web@freiberg.com.ar')
                     ->notify(new Contact($contact));
 
         return back();
