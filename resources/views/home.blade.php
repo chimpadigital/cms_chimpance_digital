@@ -355,7 +355,7 @@
                         <div class="upcoming-product bg-catalogo text-center">
                             <h3 class="title-underline white">CATÁLOGOS FREIBERG</h3>
                             <div class="separator"></div>                               
-                            <a href="catalogos.php" class="shop_now">Descargar <i class="material-icons right" style="margin-left:10px;margin-top:4px;">save_alt</i></a>
+                            <a href="{{ route('catalogo') }}" class="shop_now">Descargar <i class="material-icons right" style="margin-left:10px;margin-top:4px;">save_alt</i></a>
                             <img src="img/colores.svg" alt="" style="position: absolute;left: 0px;bottom: 0;width: 100%;padding: 0 13px;" >
                         </div>
                     </div>
