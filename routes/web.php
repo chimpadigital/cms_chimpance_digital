@@ -25,6 +25,10 @@ Route::get('/contacto',function(){
 
 Route::post('/contacto','IndexController@contact');
 
+Route::get('/admin',function(){
+	return redirect()->route('news-show');
+});
+
 Route::middleware(['auth'])->group(function () {
 
 //Novedades
