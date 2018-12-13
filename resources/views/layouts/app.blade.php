@@ -73,7 +73,7 @@ desired effect
 
     <!-- Logo -->
     <a href="index2.html" class="logo">
-      <img class="img-responsive" src="{{ asset('img/logo-freiberg-70-blanco.svg') }}">
+      <img class="img-responsive" src="{{ asset('img/logo-freiberg-70-blanco.svg') }}" style="width: 58%;margin: 8px auto;">
     </a>
 
     <!-- Header Navbar -->

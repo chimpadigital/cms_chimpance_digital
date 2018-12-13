@@ -91,7 +91,7 @@
   <div class="box-header with-border">
   
 
-    <h3 class="box-title"> Selecciona la categoria a reordenar </h3>
+    <h3 class="box-title"> Selecciona la categoria a editar </h3>
     <div class="pull-right">
       <button id="show-all-rollack" class="btn btn-success"><i class="fa fa-arrow-left"></i> atras</button>
     </div>
@@ -113,9 +113,8 @@
           <!-- small box -->
           <div class="small-box bg-{{ $color[$i++] }}">
             <div class="inner">
-              <h3>{{$category->name}}</h3>
-
               <p>categoria</p>
+              <h3>{{$category->name}}</h3>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>

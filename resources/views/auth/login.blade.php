@@ -38,7 +38,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
-    <p class="login-box-msg">Iniciar Seccion</p>
+    <p class="login-box-msg">Iniciar Sesión</p>
 
     <form action="{{ route('login') }}" method="POST">
         @csrf
