@@ -56,7 +56,7 @@ overflow-x: scroll;
       <table id="sort" class="grid table" title="Kurt Vonnegut novels">
 
         <thead>
-            <tr>
+            <tr style="background: white;">
               <th>No.</th>
               <th>Archivo</th>
               <th>Nombre</th>
