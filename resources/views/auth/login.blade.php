@@ -29,11 +29,12 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
+
 </head>
 <body class="hold-transition login-page container-fluid full">
 <div class="login-box">
   <div class="login-logo">
-    CMS
+    <img class="img-responsive" src="{{ asset('img/logo-freiberg-70-blanco.svg') }}" alt="">
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">

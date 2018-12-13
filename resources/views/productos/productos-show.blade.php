@@ -36,6 +36,11 @@
 {
     margin-bottom: 30px;
 }
+
+.pointer:hover{
+    cursor: pointer;
+  }
+
 </style>
 @endsection
 @section('content')
@@ -46,7 +51,8 @@
 
     <h3 class="box-title"> Productos </h3>
     <div class="pull-right">
-      <button id="btn-reorder" class="btn btn-success"><i class="fa fa-retweet"></i> Reordenar</button>
+      <a href="{{ route('product-create') }}" class="btn btn-success"><i class="fa fa-upload"></i> Agregar Productos</a>
+      <button id="btn-reorder" class="btn btn-success"><i class="fa fa-retweet"></i> Editar</button>
     </div>
   </div>
 
@@ -62,9 +68,9 @@
         </div>
         <br/>
 
-
+      <div class="row">
           @forelse($productsAll as $product)
-            <div class="gallery_product col-lg-3 col-md-3 col-sm-3 col-xs-6 filter {{ $product->categories->name }} destroy-{{ $product->id }}">
+            <div class="gallery_product col-md-4 filter {{ $product->categories->name }} destroy-{{ $product->id }}">
                 <img src="{{ Storage::disk('public')->url($product->url_image)  }}" class="img-responsive">
             </div>
           @empty
@@ -72,8 +78,8 @@
             <h3>No hay productos registrados</h3>
             </div>
           @endforelse
-
-        </div>
+      </div>
+    </div>
 
 
   </div>
@@ -102,6 +108,7 @@
     @endphp
     <div class="row">
       @foreach($categories as $category)      
+      <a href="#" class="btn-category-{{$category->name}}" style="color:white;">
         <div class="col-lg-4 col-xs-12">
           <!-- small box -->
           <div class="small-box bg-{{ $color[$i++] }}">
@@ -116,6 +123,7 @@
             <a href="#" class="small-box-footer btn-category-{{$category->name}}">Reordenar <i class="fa fa-retweet"></i></a>
           </div>
         </div>
+      </a>
       @endforeach
     </div>
 
@@ -155,7 +163,7 @@
           @endphp
           @forelse($productsAll as $product)
           @if($product->categories->name == $category->name)
-            <tr class="table-values destroy-{{ $product->id }}">
+            <tr class="table-values pointer destroy-{{ $product->id }}">
               <td class="index">{{$i++}}</td>
               <td>
                

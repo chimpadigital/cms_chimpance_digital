@@ -73,10 +73,7 @@ desired effect
 
     <!-- Logo -->
     <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <img class="img-responsive" src="{{ asset('img/logo-freiberg-70-blanco.svg') }}">
     </a>
 
     <!-- Header Navbar -->
@@ -93,57 +90,31 @@ desired effect
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="{{ asset('adminlte/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>{{ Auth::user()->name }}</p>
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Navegacion Principal</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="treeview">
-          <a href="#"><i class="fa fa-newspaper-o"></i> <span>Novedades</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+        <li>
+          <a href="{{ route('news-show') }}">
+            <i class="fa fa-newspaper-o"></i>
+            <span>Novedades</span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="{{ route('news-show') }}"><i class="fa fa-image"></i> Ver Slides</a></li>
-            <li><a href="{{ route('news-create') }}"><i class="fa fa-upload"></i> Subir Slides</a></li>
-          </ul>
+        </li>
+        <li>
+
+          <a href="{{ route('product-show') }}">
+            <i class="fa fa-product-hunt"></i>
+            <span>Productos</span>
+          </a>
         </li>
         
-        <li class="treeview">
-          <a href="#"><i class="fa fa-product-hunt"></i> <span>Productos</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
+        <li>
+          <a href="{{ route('catalogue-show') }}">
+            <i class="fa fa-book"></i>
+            <span>Catálogos</span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="{{ route('product-show') }}"><i class="fa fa-image"></i> Ver Productos</a></li>
-            <li><a href="{{ route('product-create') }}"><i class="fa fa-upload"></i> Subir Productos</a></li>
-          </ul>
         </li>
 
-        <li class="treeview">
-          <a href="#"><i class="fa fa-book"></i> <span>Catálogos</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="{{ route('catalogue-show') }}"><i class=""></i> Ver Catálogos</a></li>
-            <li><a href="{{ route('catalogue-create') }}">Subir Catálogos</a></li>
-          </ul>
-        </li>
         <li class="header">Otros</li>
         <li>
            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -182,12 +153,7 @@ desired effect
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+    
   </footer>
 
 </div>

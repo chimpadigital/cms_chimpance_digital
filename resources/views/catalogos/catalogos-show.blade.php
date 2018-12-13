@@ -27,6 +27,11 @@ width: 100%;
 overflow-x: scroll; 
 } 
 
+ .pointer:hover{
+    cursor: pointer;
+  }
+
+
 
 </style>
 @endsection
@@ -37,8 +42,9 @@ overflow-x: scroll;
   
     <i class="fa fa-retweet"></i>
 
-    <h3 class="box-title">Reordenar Catálogos</h3>
+    <h3 class="box-title">Editar Catálogos</h3>
     <div class="pull-right">
+      <a class="btn btn-success" href="{{ route('catalogue-create') }}"><i class="fa fa-upload"></i> Subir Catálogos</a>
       <button id="btn-save" class="btn btn-success">Guardar</button>
     </div>
   </div>
@@ -63,7 +69,7 @@ overflow-x: scroll;
             $i=1;
           @endphp
           @forelse($catalogues as $catalogue)
-            <tr class="table-values">
+            <tr class="table-values pointer">
               <td class="index">{{$i++}}</td>
               <td> 
                 <img style="max-width: 300px; max-height: 150px;" src="{{ Storage::disk('public')->url($catalogue->url_image) }}" class="img-responsive img-show">   

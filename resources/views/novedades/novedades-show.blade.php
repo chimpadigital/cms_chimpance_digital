@@ -27,9 +27,10 @@
   
     <i class="fa fa-retweet"></i>
 
-    <h3 class="box-title">Reordenar Slides</h3>
+    <h3 class="box-title">Editar Slides</h3>
     <div class="pull-right">
-      <button id="btn-save" class="btn btn-success">Guardar</button>
+      <a href="{{ route('news-create') }}" class="btn btn-success"><i class="fa fa-upload"></i> Subir Slides</a>
+      <button id="btn-save" class="btn btn-success"><i class="fa fa-save"></i> Guardar</button>
     </div>
   </div>
 
@@ -49,7 +50,7 @@
           $i=1;
         @endphp
         @forelse($imgs as $img)
-          <tr class="table-values">
+          <tr class="table-values pointer">
             <td class="index">{{$i++}}</td>
             <td>
               @php
